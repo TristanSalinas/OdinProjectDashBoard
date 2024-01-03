@@ -28,11 +28,33 @@
         </nav>
     </div>
     <div class="right-side grid">
-        <header>
-            <div class="top-header">
-                <button><img src="" alt=""></button>
+        <header class="header flex">
+            <div class="flex-header flex">
+                <div class="h-left flex">
+                    <button  for="search-bar"><img class="icon" src="icons/search.svg" alt=""></button>
+                    <input class="search-bar" type="text" name="search-bar">
+                </div>
+                <div class="h-right flex">
+                    <button><img class="icon" src="icons/bell.svg" alt="" srcset=""></button>
+                    <button><img class="icon" src="icons/account-circle.svg" alt="" srcset=""></button>
+                    <h2>My super Account</h2>
+                </div>
             </div>
-            <div class="bot-header"></div>
+            <div class="flex-header flex">
+                <div class="h-left flex">
+                    <img class="big-icon" src="icons/account-circle.svg" alt="" srcset="">
+                    <div class="flex acc-current">
+                        <h3>Hi there,</h3>
+                        <h1 class="fw-bold">My super Account (@account)</h1>
+                    </div>
+
+                </div>
+                <div class="h-right flex">
+                    <button class="blue-button">New</button>
+                    <button class="blue-button">Upload</button>
+                    <button class="blue-button">Share</button>
+                </div>
+            </div>
         </header>
         <div class="main-content">
             <div class="projects">
