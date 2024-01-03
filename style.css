@@ -97,23 +97,27 @@ body {
     background-color: var(--light-blue);
 }
 
-/* ----- uniques styles -------*/
+/* ----- generals styles -------*/
 
 
 body {
     
-    grid-template-columns: max(150px, 20vw) 1fr;
-    gap: none;
+    
     
 }
 
-.dashboard{
-    height: 100%;
-    grid-template-rows: 3rem 1fr;  
-    gap: 1rem; 
-    color: var(--white);
-    z-index: 1;
-    
+.icon {
+    width: 20px;
+    height: 20px;
+}
+button:hover {
+    background-color: var(--yellow);
+}
+.right-side {
+    flex: 1;
+    overflow-y: hidden;
+    flex-direction: column;
+    padding-bottom: 3rem;
 }
 h1 {
     display: flex;
@@ -121,6 +125,33 @@ h1 {
     
     gap: 1rem;
     font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-block: 1rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: var(--dark-grey);
+}
+/*-------- dash board --------*/
+.dashboard{
+    height: 100%;
+    width: max(fit-content, 20vw);
+    padding-right: 1.5rem;
+    grid-template-rows: 3rem 1fr;  
+    gap: 1rem; 
+    color: var(--white);
+    z-index: 1;
+    
 }
 
 .nav > ul >li :hover {
@@ -143,10 +174,7 @@ h1 {
 
 
 
-.icon {
-    width: 20px;
-    height: 20px;
-}
+/*-------- header --------*/
 
 header {
     flex-direction: column;
@@ -216,4 +244,84 @@ header {
     background-color: var(--light-blue);
     color: var(--white);
     border-radius: 1rem;
+}
+
+/*-----------content ----------*/
+
+.main-content {
+    flex: 1;
+    grid-template-columns: 1fr 20vw;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "projects announcement"
+    "projects trending";
+}
+
+.main-content :first-child {
+    grid-area: projects;
+}
+
+
+
+.content-box {
+    margin-left: 1rem;
+    flex-direction: column;
+}
+
+.content-box>*:last-child {
+    flex: 1;
+    
+}
+
+/*--------- project grid and projects cards items ----*/
+
+.project-grid {
+    gap: 1rem;
+    
+}
+
+.project-card {
+    --radius: 0.5rem;
+    background-color: var(--white);
+    padding: 1.5rem 1rem 0.2rem 1rem;
+    position: relative;
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 7px 0px rgba(0,0,0,0.3);
+}
+
+.project-card::before {   /* For the yellow line */
+    position: absolute;
+    content: "";
+    width: 5px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    border-radius: var(--radius) 0 0 var(--radius);
+    background-color: var(--yellow);
+}
+
+.project-card > p {
+    flex: 1;
+    margin-bottom: 1rem;
+}
+
+.project-buttons {
+    height: fit-content;
+    width: fit-content;
+    align-self: flex-end;
+
+    background-color: var(--white);
+
+   
+}
+
+.project-buttons>* {
+    
+    aspect-ratio: 1;
+    border-radius: 2em;
+    border: none;
+    background-color: var(--white);
 }
