@@ -1,0 +1,145 @@
+
+/* ----- custom variables -------*/
+
+:root {
+    --light-blue:#1992d4;
+    --lighter-blue: #1992d4c8;
+    --yellow: #f0b429;
+    --light-grey: #e2e8f0;
+    --dark-grey: #6d6d6d;
+    --white:#ffffff;
+
+    --uni-gap: 1rem;
+}
+
+
+/* ----- Reset -------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+    text-decoration: none;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--light-grey);
+}
+
+/* ----- utility classes -------*/
+
+.grid {
+    display: grid;
+    
+}
+
+
+
+.flex {
+    display: flex;
+    
+}
+
+
+
+.fw-bold {
+    font-weight: 600;
+}
+.txt-clr-white {
+    color: var(--white);
+}
+
+
+.bg-clr-lightblue{
+    background-color: var(--light-blue);
+}
+
+/* ----- uniques styles -------*/
+
+
+body {
+    
+    grid-template-columns: max(150px, 20vw) 1fr;
+    gap: none;
+    
+}
+
+.dashboard{
+    height: 100%;
+    grid-template-rows: 3rem 1fr;  
+    gap: 1rem; 
+}
+h1 {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    gap: 1rem;
+    color: var(--white);
+}
+
+.nav > ul >li :hover {
+    background-color: var(--yellow);
+}
+
+.nav>ul::before,
+.dashboard-link {
+    color: var(--white);
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav>ul::before {
+    content: "";
+    padding: 1.2rem;
+}
+
+
+
+.icon {
+    width: 30px;
+}
+
+
